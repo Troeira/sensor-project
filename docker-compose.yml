@@ -1,0 +1,92 @@
+services:
+  broker:
+    image: eclipse-mosquitto
+    container_name: mosquitto
+    ports:
+      - "1883:1883"
+    volumes:
+      - ./mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf
+
+  sensor1:
+    build: .
+    environment:
+      MQTT_SUFFIX: "1"
+      DATA_DRIFT: "false"
+      MQTT_RATE: "1"
+    depends_on:
+      - broker
+
+  sensor2:
+    build: .
+    environment:
+      MQTT_SUFFIX: "2"
+      DATA_DRIFT: "true"
+      DRIFT_RATE: "0.05"
+      MQTT_RATE: "1"
+    depends_on:
+      - broker
+
+  sensor3:
+    build: .
+    environment:
+      MQTT_SUFFIX: "3"
+      DATA_DRIFT: "true"
+      DRIFT_RATE: "0.1"
+      MQTT_RATE: "0.5"
+    depends_on:
+      - broker
+
+  nodered:
+    build:
+      context: .
+      dockerfile: dockerfile.nodered
+    container_name: nodered
+    ports:
+      - "1880:1880"
+    depends_on:
+      - broker
+    volumes:
+      - nodered_data:/data 
+      - ./nodered_flows:/data/flows  
+    restart: always
+
+  mongo:
+    image: mongo:latest
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db 
+    restart: always
+
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    volumes:
+      - grafana_data:/var/lib/grafana 
+      - ./grafana/provisioning:/etc/grafana/provisioning  
+    restart: always
+
+  postgres:
+    image: timescale/timescaledb:latest-pg14
+    container_name: postgres
+    environment:
+      POSTGRES_USER: grafana
+      POSTGRES_PASSWORD: grafana
+      POSTGRES_DB: sensors
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data  
+    restart: always
+
+volumes:
+  nodered_data:
+  mongo_data:
+  grafana_data:
+  postgres_data:

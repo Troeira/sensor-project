@@ -1,0 +1,1546 @@
+[
+    {
+        "id": "b61a60abf102755a",
+        "type": "tab",
+        "label": "ISCF",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "83fe8ed00662cb0d",
+        "type": "tab",
+        "label": "MongoDB",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "300dce1ba6c9245d",
+        "type": "tab",
+        "label": "PostGresSQL",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "mqtt_broker",
+        "type": "mqtt-broker",
+        "name": "Local Mosquitto",
+        "broker": "broker",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "c5c99a34a7c139ae",
+        "type": "ui_tab",
+        "name": "Sensor Dashboard",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "f5183b3537892bec",
+        "type": "ui_group",
+        "name": "Charts",
+        "tab": "c5c99a34a7c139ae",
+        "order": 1,
+        "disp": true,
+        "width": "31",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "f38d8425e0f2607c",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "f9c64d06c6168846",
+        "type": "mongodb",
+        "hostname": "mongo:27017",
+        "topology": "direct",
+        "connectOptions": "",
+        "port": 27017,
+        "db": "sensor_data",
+        "name": ""
+    },
+    {
+        "id": "a407242fa5f1a422",
+        "type": "ui_group",
+        "name": "Gauges",
+        "tab": "c5c99a34a7c139ae",
+        "order": 2,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1e4b586089f84ef7",
+        "type": "ui_spacer",
+        "z": "b61a60abf102755a",
+        "name": "spacer",
+        "group": "f5183b3537892bec",
+        "order": 4,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "2ac414e4964700aa",
+        "type": "ui_spacer",
+        "z": "b61a60abf102755a",
+        "name": "spacer",
+        "group": "f5183b3537892bec",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "e2770a6fa627caa6",
+        "type": "ui_spacer",
+        "z": "b61a60abf102755a",
+        "name": "spacer",
+        "group": "f5183b3537892bec",
+        "order": 6,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "7c02a8f313e68882",
+        "type": "ui_spacer",
+        "z": "b61a60abf102755a",
+        "name": "spacer",
+        "group": "f5183b3537892bec",
+        "order": 8,
+        "width": "8",
+        "height": "1"
+    },
+    {
+        "id": "c661617ce2bcecec",
+        "type": "postgreSQLConfig",
+        "name": "",
+        "host": "postgres",
+        "hostFieldType": "str",
+        "port": 5432,
+        "portFieldType": "num",
+        "database": "sensors",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "applicationName": "",
+        "applicationNameType": "str",
+        "max": 10,
+        "maxFieldType": "num",
+        "idle": 1000,
+        "idleFieldType": "num",
+        "connectionTimeout": 10000,
+        "connectionTimeoutFieldType": "num",
+        "user": "grafana",
+        "userFieldType": "str",
+        "password": "grafana",
+        "passwordFieldType": "str"
+    },
+    {
+        "id": "532857086fa90da3",
+        "type": "ui_group",
+        "name": "Charts [raw]",
+        "tab": "c5c99a34a7c139ae",
+        "order": 3,
+        "disp": true,
+        "width": "31",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "de6749c617cf0148",
+        "type": "ui_spacer",
+        "z": "b61a60abf102755a",
+        "name": "spacer",
+        "group": "532857086fa90da3",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "aaca820bc032367d",
+        "type": "ui_spacer",
+        "z": "b61a60abf102755a",
+        "name": "spacer",
+        "group": "532857086fa90da3",
+        "order": 4,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "44c0a7f1dc2cbbbc",
+        "type": "ui_spacer",
+        "z": "b61a60abf102755a",
+        "name": "spacer",
+        "group": "532857086fa90da3",
+        "order": 6,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "f8b32e83f43feb5e",
+        "type": "ui_chart",
+        "z": "b61a60abf102755a",
+        "name": "",
+        "group": "f5183b3537892bec",
+        "order": 1,
+        "width": "7",
+        "height": "5",
+        "label": "Main",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "auto",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 990,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9da93830cf1c12e7",
+        "type": "mqtt in",
+        "z": "b61a60abf102755a",
+        "name": "",
+        "topic": "sensor1/data",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "mqtt_broker",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 300,
+        "wires": [
+            [
+                "1811e0c8f0a25447"
+            ]
+        ]
+    },
+    {
+        "id": "a37bf2df8c1414d4",
+        "type": "mqtt in",
+        "z": "b61a60abf102755a",
+        "name": "",
+        "topic": "sensor2/data",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "mqtt_broker",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 380,
+        "wires": [
+            [
+                "19a0d80b8e430fda"
+            ]
+        ]
+    },
+    {
+        "id": "9c1f90c2d725c3e6",
+        "type": "mqtt in",
+        "z": "b61a60abf102755a",
+        "name": "",
+        "topic": "sensor3/data",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "mqtt_broker",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 460,
+        "wires": [
+            [
+                "99a97c109c464e08"
+            ]
+        ]
+    },
+    {
+        "id": "198846f0df6ac8ba",
+        "type": "ui_chart",
+        "z": "b61a60abf102755a",
+        "name": "",
+        "group": "f5183b3537892bec",
+        "order": 5,
+        "width": "7",
+        "height": "5",
+        "label": "sensor2",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "auto",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1140,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "77a53dc95d99fef0",
+        "type": "ui_chart",
+        "z": "b61a60abf102755a",
+        "name": "",
+        "group": "f5183b3537892bec",
+        "order": 3,
+        "width": "7",
+        "height": "5",
+        "label": "sensor1",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "auto",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1140,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1811e0c8f0a25447",
+        "type": "function",
+        "z": "b61a60abf102755a",
+        "name": "Remove outliers Sensor1",
+        "func": "const history = global.get(\"Sensor1_history\") || [];\nconst newValue = msg.payload;\n\n//node.warn(\"History: \" + JSON.stringify(history)); \n\nconst values = history.map(d => d.payload);  \nconst values2 = values.filter(item => item !== null && item !== undefined); \n\n\nif (values2.length < 2) {\n  msg.payload = {\n    value: newValue,\n    average: NaN  \n  };\n  return msg;\n}\n\n\nconst avg = values2.reduce((a, b) => a + b, 0) / values2.length;\nconst std = Math.sqrt(values2.reduce((a, b) => a + Math.pow(b - avg, 2), 0) / values2.length);\n\n\nconst z = (newValue - avg) / std;\nconst isOutlier = Math.abs(z) > 1;  \n\n//node.warn(`Calculated avg: ${avg}`);  \n\nif (!isOutlier) {\n  msg.payload = {\n    value: newValue,\n    average: avg.toFixed(2)\n  };\n  return msg;\n}\n\nreturn null;  \n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 300,
+        "wires": [
+            [
+                "098845123b3a858e",
+                "72d510aed7e34c69"
+            ]
+        ]
+    },
+    {
+        "id": "098845123b3a858e",
+        "type": "function",
+        "z": "b61a60abf102755a",
+        "name": "Format to Graph",
+        "func": "msg.payload = msg.payload.value;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 280,
+        "wires": [
+            [
+                "77a53dc95d99fef0",
+                "f8b32e83f43feb5e"
+            ]
+        ]
+    },
+    {
+        "id": "19a0d80b8e430fda",
+        "type": "function",
+        "z": "b61a60abf102755a",
+        "name": "Remove outliers Sensor1",
+        "func": "const history = global.get(\"Sensor2_history\") || [];\nconst newValue = msg.payload;\n\n//node.warn(\"History: \" + JSON.stringify(history)); \n\nconst values = history.map(d => d.payload);  \nconst values2 = values.filter(item => item !== null && item !== undefined); \n\n\nif (values2.length < 2) {\n  msg.payload = {\n    value: newValue,\n    average: NaN  \n  };\n  return msg;\n}\n\n\nconst avg = values2.reduce((a, b) => a + b, 0) / values2.length;\nconst std = Math.sqrt(values2.reduce((a, b) => a + Math.pow(b - avg, 2), 0) / values2.length);\n\n\nconst z = (newValue - avg) / std;\nconst isOutlier = Math.abs(z) > 1;  \n\n//node.warn(`Calculated avg: ${avg}`);  \n\nif (!isOutlier) {\n  msg.payload = {\n    value: newValue,\n    average: avg.toFixed(2)\n  };\n  return msg;\n}\n\nreturn null;  \n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 380,
+        "wires": [
+            [
+                "55d5f0718144f78f",
+                "7aaee2d5c2b25723"
+            ]
+        ]
+    },
+    {
+        "id": "55d5f0718144f78f",
+        "type": "function",
+        "z": "b61a60abf102755a",
+        "name": "Format to Graph",
+        "func": "msg.payload = msg.payload.value;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 360,
+        "wires": [
+            [
+                "f8b32e83f43feb5e",
+                "198846f0df6ac8ba"
+            ]
+        ]
+    },
+    {
+        "id": "99a97c109c464e08",
+        "type": "function",
+        "z": "b61a60abf102755a",
+        "name": "Remove outliers Sensor1",
+        "func": "const history = global.get(\"Sensor3_history\") || [];\nconst newValue = msg.payload;\n\n//node.warn(\"History: \" + JSON.stringify(history)); \n\nconst values = history.map(d => d.payload);  \nconst values2 = values.filter(item => item !== null && item !== undefined); \n\n\nif (values2.length < 2) {\n  msg.payload = {\n    value: newValue,\n    average: NaN  \n  };\n  return msg;\n}\n\n\nconst avg = values2.reduce((a, b) => a + b, 0) / values2.length;\nconst std = Math.sqrt(values2.reduce((a, b) => a + Math.pow(b - avg, 2), 0) / values2.length);\n\n\nconst z = (newValue - avg) / std;\nconst isOutlier = Math.abs(z) > 1;  \n\n//node.warn(`Calculated avg: ${avg}`);  \n\nif (!isOutlier) {\n  msg.payload = {\n    value: newValue,\n    average: avg.toFixed(2)\n  };\n  return msg;\n}\n\nreturn null;  \n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 460,
+        "wires": [
+            [
+                "37ea55e6ee778fad",
+                "342a700177e25429"
+            ]
+        ]
+    },
+    {
+        "id": "37ea55e6ee778fad",
+        "type": "function",
+        "z": "b61a60abf102755a",
+        "name": "Format to Graph",
+        "func": "msg.payload = msg.payload.value;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 440,
+        "wires": [
+            [
+                "f8b32e83f43feb5e",
+                "333d49a535e0b3fe"
+            ]
+        ]
+    },
+    {
+        "id": "72d510aed7e34c69",
+        "type": "ui_text",
+        "z": "b61a60abf102755a",
+        "group": "f5183b3537892bec",
+        "order": 9,
+        "width": "8",
+        "height": "1",
+        "name": "",
+        "label": "Average Sensor1: ",
+        "format": "{{msg.payload.average}}",
+        "layout": "row-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#ffffff",
+        "x": 730,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "7aaee2d5c2b25723",
+        "type": "ui_text",
+        "z": "b61a60abf102755a",
+        "group": "f5183b3537892bec",
+        "order": 10,
+        "width": "8",
+        "height": "1",
+        "name": "",
+        "label": "Average Sensor2: ",
+        "format": "{{msg.payload.average}}",
+        "layout": "row-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#ffffff",
+        "x": 730,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "342a700177e25429",
+        "type": "ui_text",
+        "z": "b61a60abf102755a",
+        "group": "f5183b3537892bec",
+        "order": 11,
+        "width": "7",
+        "height": "1",
+        "name": "",
+        "label": "Average Sensor3: ",
+        "format": "{{msg.payload.average}}",
+        "layout": "row-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#ffffff",
+        "x": 730,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "9c554b09912d1ebe",
+        "type": "mqtt in",
+        "z": "b61a60abf102755a",
+        "name": "",
+        "topic": "sensor1/data",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "mqtt_broker",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 640,
+        "wires": [
+            [
+                "9a360070f95ec802",
+                "45335f417b6e04ae"
+            ]
+        ]
+    },
+    {
+        "id": "dc3d194f96b72354",
+        "type": "mqtt in",
+        "z": "b61a60abf102755a",
+        "name": "",
+        "topic": "sensor2/data",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "mqtt_broker",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 720,
+        "wires": [
+            [
+                "85a9f5a45bfbe03f",
+                "45335f417b6e04ae"
+            ]
+        ]
+    },
+    {
+        "id": "be4863062969f7ab",
+        "type": "mqtt in",
+        "z": "b61a60abf102755a",
+        "name": "",
+        "topic": "sensor3/data",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "mqtt_broker",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 800,
+        "wires": [
+            [
+                "f65df9e3889d4ce7",
+                "45335f417b6e04ae"
+            ]
+        ]
+    },
+    {
+        "id": "85a9f5a45bfbe03f",
+        "type": "ui_chart",
+        "z": "b61a60abf102755a",
+        "name": "",
+        "group": "532857086fa90da3",
+        "order": 3,
+        "width": "7",
+        "height": "5",
+        "label": "sensor2",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "auto",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 360,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "333d49a535e0b3fe",
+        "type": "ui_chart",
+        "z": "b61a60abf102755a",
+        "name": "",
+        "group": "f5183b3537892bec",
+        "order": 7,
+        "width": "7",
+        "height": "5",
+        "label": "sensor3",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "auto",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1140,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9a360070f95ec802",
+        "type": "ui_chart",
+        "z": "b61a60abf102755a",
+        "name": "",
+        "group": "532857086fa90da3",
+        "order": 5,
+        "width": "7",
+        "height": "5",
+        "label": "sensor1",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "auto",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 360,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f65df9e3889d4ce7",
+        "type": "ui_chart",
+        "z": "b61a60abf102755a",
+        "name": "",
+        "group": "532857086fa90da3",
+        "order": 7,
+        "width": "7",
+        "height": "5",
+        "label": "sensor2",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "auto",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 360,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "45335f417b6e04ae",
+        "type": "ui_chart",
+        "z": "b61a60abf102755a",
+        "name": "",
+        "group": "532857086fa90da3",
+        "order": 1,
+        "width": "7",
+        "height": "5",
+        "label": "Main",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "auto",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 350,
+        "y": 900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2b35dd511f7e606e",
+        "type": "mqtt in",
+        "z": "83fe8ed00662cb0d",
+        "name": "",
+        "topic": "sensor1/data",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "mqtt_broker",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 180,
+        "wires": [
+            [
+                "0aac219294d0f93d"
+            ]
+        ]
+    },
+    {
+        "id": "370ce9643ffa0bff",
+        "type": "mqtt in",
+        "z": "83fe8ed00662cb0d",
+        "name": "",
+        "topic": "sensor2/data",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "mqtt_broker",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 260,
+        "wires": [
+            [
+                "8ce59d424347dc5c"
+            ]
+        ]
+    },
+    {
+        "id": "8d136532f1428572",
+        "type": "mqtt in",
+        "z": "83fe8ed00662cb0d",
+        "name": "",
+        "topic": "sensor3/data",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "mqtt_broker",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 340,
+        "wires": [
+            [
+                "a827796cfa8d33e6"
+            ]
+        ]
+    },
+    {
+        "id": "0aac219294d0f93d",
+        "type": "mongodb out",
+        "z": "83fe8ed00662cb0d",
+        "mongodb": "f9c64d06c6168846",
+        "name": "Sensor 1 insert",
+        "collection": "sensor1_data",
+        "payonly": true,
+        "upsert": false,
+        "multi": false,
+        "operation": "insert",
+        "x": 480,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "8ce59d424347dc5c",
+        "type": "mongodb out",
+        "z": "83fe8ed00662cb0d",
+        "mongodb": "f9c64d06c6168846",
+        "name": "Sensor 2 insert",
+        "collection": "sensor2_data",
+        "payonly": true,
+        "upsert": false,
+        "multi": false,
+        "operation": "insert",
+        "x": 480,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "a827796cfa8d33e6",
+        "type": "mongodb out",
+        "z": "83fe8ed00662cb0d",
+        "mongodb": "f9c64d06c6168846",
+        "name": "Sensor 3 insert",
+        "collection": "sensor3_data",
+        "payonly": true,
+        "upsert": false,
+        "multi": false,
+        "operation": "insert",
+        "x": 480,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "f285f06b6ff3f863",
+        "type": "mongodb in",
+        "z": "83fe8ed00662cb0d",
+        "mongodb": "f9c64d06c6168846",
+        "name": "Sensor 1 get",
+        "collection": "sensor1_data",
+        "operation": "find",
+        "x": 450,
+        "y": 500,
+        "wires": [
+            [
+                "3195ba5dc73e1a98"
+            ]
+        ]
+    },
+    {
+        "id": "3684d1036be286ed",
+        "type": "mongodb in",
+        "z": "83fe8ed00662cb0d",
+        "mongodb": "f9c64d06c6168846",
+        "name": "Sensor 2 get",
+        "collection": "sensor2_data",
+        "operation": "find",
+        "x": 450,
+        "y": 580,
+        "wires": [
+            [
+                "30ea80b256c4f15a"
+            ]
+        ]
+    },
+    {
+        "id": "cbe0b2d32bf743d6",
+        "type": "mongodb in",
+        "z": "83fe8ed00662cb0d",
+        "mongodb": "f9c64d06c6168846",
+        "name": "Sensor 3 get",
+        "collection": "sensor3_data",
+        "operation": "find",
+        "x": 450,
+        "y": 660,
+        "wires": [
+            [
+                "677683cddc999997"
+            ]
+        ]
+    },
+    {
+        "id": "9fe1792089f5c93a",
+        "type": "inject",
+        "z": "83fe8ed00662cb0d",
+        "name": "Trigger",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "collection",
+                "v": "sensor2_data",
+                "vt": "str"
+            },
+            {
+                "p": "sort",
+                "v": " { \"_id\": -1}",
+                "vt": "json"
+            },
+            {
+                "p": "limit",
+                "v": "100",
+                "vt": "str"
+            },
+            {
+                "p": "value",
+                "v": "{ \"$ne\": null }",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{}",
+        "payloadType": "json",
+        "x": 220,
+        "y": 580,
+        "wires": [
+            [
+                "3684d1036be286ed"
+            ]
+        ]
+    },
+    {
+        "id": "3195ba5dc73e1a98",
+        "type": "function",
+        "z": "83fe8ed00662cb0d",
+        "name": "function 1",
+        "func": "global.set(\"Sensor1_history\", msg.payload);\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "30ea80b256c4f15a",
+        "type": "function",
+        "z": "83fe8ed00662cb0d",
+        "name": "function 2",
+        "func": "global.set(\"Sensor2_history\", msg.payload);\nreturn null;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "677683cddc999997",
+        "type": "function",
+        "z": "83fe8ed00662cb0d",
+        "name": "function 3",
+        "func": "global.set(\"Sensor3_history\", msg.payload);\nreturn null;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d7748a8aec39f744",
+        "type": "comment",
+        "z": "83fe8ed00662cb0d",
+        "name": "Getting data from mongo and storing in global variable",
+        "info": "",
+        "x": 340,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "97ca894319bcfc42",
+        "type": "inject",
+        "z": "83fe8ed00662cb0d",
+        "name": "Trigger",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "collection",
+                "v": "sensor1_data",
+                "vt": "str"
+            },
+            {
+                "p": "sort",
+                "v": " { \"_id\": -1}",
+                "vt": "json"
+            },
+            {
+                "p": "limit",
+                "v": "100",
+                "vt": "str"
+            },
+            {
+                "p": "value",
+                "v": "{ \"$ne\": null }",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{}",
+        "payloadType": "json",
+        "x": 220,
+        "y": 500,
+        "wires": [
+            [
+                "f285f06b6ff3f863"
+            ]
+        ]
+    },
+    {
+        "id": "cabece563343de56",
+        "type": "inject",
+        "z": "83fe8ed00662cb0d",
+        "name": "Trigger",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "collection",
+                "v": "sensor3_data",
+                "vt": "str"
+            },
+            {
+                "p": "sort",
+                "v": " { \"_id\": -1}",
+                "vt": "json"
+            },
+            {
+                "p": "limit",
+                "v": "100",
+                "vt": "str"
+            },
+            {
+                "p": "value",
+                "v": "{ \"$ne\": null }",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{}",
+        "payloadType": "json",
+        "x": 220,
+        "y": 660,
+        "wires": [
+            [
+                "cbe0b2d32bf743d6"
+            ]
+        ]
+    },
+    {
+        "id": "c6192fe3b47e448f",
+        "type": "mqtt in",
+        "z": "300dce1ba6c9245d",
+        "name": "",
+        "topic": "sensor1/data",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "mqtt_broker",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 170,
+        "y": 320,
+        "wires": [
+            [
+                "13b3c92a22487fd2"
+            ]
+        ]
+    },
+    {
+        "id": "d9a080b40ee3817b",
+        "type": "function",
+        "z": "300dce1ba6c9245d",
+        "name": "Format for PostgreSQL Sensor  1",
+        "func": "let sensorId = 'sensor1'; \nlet value = msg.payload.value;   \nlet timestamp = new Date().toISOString();\n\nmsg.query = `INSERT INTO sensor_data (sensor_id, value, timestamp) VALUES ('${sensorId}', ${value}, '${timestamp}')`;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 320,
+        "wires": [
+            [
+                "ed48c38ce34651e6"
+            ]
+        ]
+    },
+    {
+        "id": "ed48c38ce34651e6",
+        "type": "postgresql",
+        "z": "300dce1ba6c9245d",
+        "name": "Insert Sensor1",
+        "query": "msg.query",
+        "postgreSQLConfig": "c661617ce2bcecec",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 1080,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "eb13eb244d57aa5e",
+        "type": "mqtt in",
+        "z": "300dce1ba6c9245d",
+        "name": "",
+        "topic": "sensor2/data",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "mqtt_broker",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 170,
+        "y": 580,
+        "wires": [
+            [
+                "271934a4045471bd"
+            ]
+        ]
+    },
+    {
+        "id": "99ca6a422d604a8f",
+        "type": "function",
+        "z": "300dce1ba6c9245d",
+        "name": "Format for PostgreSQL Sensor 2",
+        "func": "let sensorId = 'sensor2'; \nlet value = msg.payload.value;   \nlet timestamp = new Date().toISOString();\n\nmsg.query = `INSERT INTO sensor_data (sensor_id, value, timestamp) VALUES ('${sensorId}', ${value}, '${timestamp}')`;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 580,
+        "wires": [
+            [
+                "876c691302b4cb1c"
+            ]
+        ]
+    },
+    {
+        "id": "876c691302b4cb1c",
+        "type": "postgresql",
+        "z": "300dce1ba6c9245d",
+        "name": "Insert Sensor2",
+        "query": "msg.query",
+        "postgreSQLConfig": "c661617ce2bcecec",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 1080,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "654dba0adca54687",
+        "type": "mqtt in",
+        "z": "300dce1ba6c9245d",
+        "name": "",
+        "topic": "sensor3/data",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "mqtt_broker",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 170,
+        "y": 820,
+        "wires": [
+            [
+                "c330c2997f70b8a7"
+            ]
+        ]
+    },
+    {
+        "id": "96bbce972b847710",
+        "type": "function",
+        "z": "300dce1ba6c9245d",
+        "name": "Format for PostgreSQL Sensor 3",
+        "func": "let sensorId = 'sensor3'; \nlet value = msg.payload.value;   \nlet timestamp = new Date().toISOString();\n\nmsg.query = `INSERT INTO sensor_data (sensor_id, value, timestamp) VALUES ('${sensorId}', ${value}, '${timestamp}')`;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 820,
+        "wires": [
+            [
+                "9cc6cd7a6712007e"
+            ]
+        ]
+    },
+    {
+        "id": "9cc6cd7a6712007e",
+        "type": "postgresql",
+        "z": "300dce1ba6c9245d",
+        "name": "Insert Sensor3",
+        "query": "msg.query",
+        "postgreSQLConfig": "c661617ce2bcecec",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 1080,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "13b3c92a22487fd2",
+        "type": "function",
+        "z": "300dce1ba6c9245d",
+        "name": "Remove outliers Sensor1",
+        "func": "const history = global.get(\"Sensor1_history\") || [];\nconst newValue = msg.payload;\n\n//node.warn(\"History: \" + JSON.stringify(history)); \n\nconst values = history.map(d => d.payload);  \nconst values2 = values.filter(item => item !== null && item !== undefined); \n\n\nif (values2.length < 2) {\n  msg.payload = {\n    value: newValue,\n    average: NaN  \n  };\n  return msg;\n}\n\n\nconst avg = values2.reduce((a, b) => a + b, 0) / values2.length;\nconst std = Math.sqrt(values2.reduce((a, b) => a + Math.pow(b - avg, 2), 0) / values2.length);\n\n\nconst z = (newValue - avg) / std;\nconst isOutlier = Math.abs(z) > 1;  \n\n//node.warn(`Calculated avg: ${avg}`);  \n\nif (!isOutlier) {\n  msg.payload = {\n    value: newValue,\n    average: avg.toFixed(2)\n  };\n  return msg;\n}\n\nreturn null;  \n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 320,
+        "wires": [
+            [
+                "d9a080b40ee3817b"
+            ]
+        ]
+    },
+    {
+        "id": "271934a4045471bd",
+        "type": "function",
+        "z": "300dce1ba6c9245d",
+        "name": "Remove outliers Sensor1",
+        "func": "const history = global.get(\"Sensor2_history\") || [];\nconst newValue = msg.payload;\n\n//node.warn(\"History: \" + JSON.stringify(history)); \n\nconst values = history.map(d => d.payload);  \nconst values2 = values.filter(item => item !== null && item !== undefined); \n\n\nif (values2.length < 2) {\n  msg.payload = {\n    value: newValue,\n    average: NaN  \n  };\n  return msg;\n}\n\n\nconst avg = values2.reduce((a, b) => a + b, 0) / values2.length;\nconst std = Math.sqrt(values2.reduce((a, b) => a + Math.pow(b - avg, 2), 0) / values2.length);\n\n\nconst z = (newValue - avg) / std;\nconst isOutlier = Math.abs(z) > 1;  \n\n//node.warn(`Calculated avg: ${avg}`);  \n\nif (!isOutlier) {\n  msg.payload = {\n    value: newValue,\n    average: avg.toFixed(2)\n  };\n  return msg;\n}\n\nreturn null;  \n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 580,
+        "wires": [
+            [
+                "99ca6a422d604a8f"
+            ]
+        ]
+    },
+    {
+        "id": "c330c2997f70b8a7",
+        "type": "function",
+        "z": "300dce1ba6c9245d",
+        "name": "Remove outliers Sensor1",
+        "func": "const history = global.get(\"Sensor3_history\") || [];\nconst newValue = msg.payload;\n\n//node.warn(\"History: \" + JSON.stringify(history)); \n\nconst values = history.map(d => d.payload);  \nconst values2 = values.filter(item => item !== null && item !== undefined); \n\n\nif (values2.length < 2) {\n  msg.payload = {\n    value: newValue,\n    average: NaN  \n  };\n  return msg;\n}\n\n\nconst avg = values2.reduce((a, b) => a + b, 0) / values2.length;\nconst std = Math.sqrt(values2.reduce((a, b) => a + Math.pow(b - avg, 2), 0) / values2.length);\n\n\nconst z = (newValue - avg) / std;\nconst isOutlier = Math.abs(z) > 1;  \n\n//node.warn(`Calculated avg: ${avg}`);  \n\nif (!isOutlier) {\n  msg.payload = {\n    value: newValue,\n    average: avg.toFixed(2)\n  };\n  return msg;\n}\n\nreturn null;  \n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 820,
+        "wires": [
+            [
+                "96bbce972b847710"
+            ]
+        ]
+    }
+]

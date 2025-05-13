@@ -1,0 +1,8 @@
+FROM nodered/node-red:latest
+
+RUN npm install node-red-dashboard node-red-node-mongodb node-red-contrib-postgresql
+
+ENV FLOWS=/data/flows.json
+
+CMD ["npm", "start", "--", "--userDir", "/data"]
+
